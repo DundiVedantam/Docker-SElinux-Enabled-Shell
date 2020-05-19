@@ -1,14 +1,17 @@
 # Docker-SElinux-Enabled-Shell
 
-1)yum install docker
+1) yum install docker
 
-2)sudo yum install python-devel     
+2) sudo yum install python-devel     
 
-3)sudo sysctl -w vm.max_map_count=262144
+3). sudo sysctl -w vm.max_map_count=262144
 
 4)Install docker-compose
+    
     Install Extra Packages for Enterprise Linux
+    
     $ sudo yum install epel-release
+    
     Install python-pip
     
     $ sudo yum install -y python-pip
@@ -27,11 +30,11 @@
 
 5)  docker-compose issues (Workaround)
 
-    -pip install --upgrade pip
+     pip install --upgrade pip
     
-    - pip install --upgrade jsonschema
+     pip install --upgrade jsonschema
     
-    - pip install --ignore-installed subprocess32
+     pip install --ignore-installed subprocess32
 
 
 6)start Docker Service/enable
@@ -63,15 +66,15 @@
 
 8)run docker file(go to where docker file is)
 	
-	docker build -t rbs_image_script  .
+       docker build -t rbs_image_script  .
 
 9)docker-compose up(go to docker-compose.yml)
 	
-	docker-compose up -d 
+      docker-compose up -d 
 
 10)login to container 
 	
-	docker-compose exec rbs_image_script  bash
+     docker-compose exec rbs_image_script  bash
   
 11)save docker 
 	
@@ -79,7 +82,7 @@
 
 12) docker load 
     
-    docker load <  rbs_image_script.tar
+    	docker load <  rbs_image_script.tar
    
 13) docker-compose.yml added volumes:
 
