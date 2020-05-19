@@ -1,0 +1,15 @@
+version: '3'
+services:
+  rbs_image_script:
+    build: .
+    networks:
+     spring-petclinic-net:
+        aliases:
+          - rbs_image_script
+    volumes:
+        - "/storage0/app:/storage0/app"
+        - "/storage0/pipeline1:/storage0/pipeline1"
+        - "/storage0/pipeline2:/storage0/pipeline2"
+networks:
+  spring-petclinic-net:
+    driver: bridge
