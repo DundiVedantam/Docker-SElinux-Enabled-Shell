@@ -80,3 +80,9 @@
 12) docker load 
     
     docker load <  rbs_image_script.tar
+   
+13) docker-compose.yml added volumes:
+
+        - "/storage0/app:/storage0/app"
+        - "/storage0/pipeline1:/storage0/pipeline1"
+        - "/storage0/pipeline2:/storage0/pipeline2"
